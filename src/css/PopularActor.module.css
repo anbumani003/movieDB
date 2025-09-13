@@ -1,0 +1,161 @@
+.genreSection {
+    padding: 3rem 0;
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); */
+      background: linear-gradient(135deg, rgb(142, 142, 227), rgb(239, 149, 149));
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.genreContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    border-radius: 2px;
+}
+
+.genreCarousel {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+.genreCarousel::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.genreCard {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.genreCard:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.genreImageWrapper {
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid white;
+}
+
+.genreImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.genreImageWrapper:hover .genreImage {
+    transform: scale(1.1);
+}
+
+.genreOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+    border-radius: 50%;
+}
+
+.genreName {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.genreCard:hover .genreName {
+    color: #e52e71;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 2rem;
+    }
+    .genreImageWrapper {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem;
+    }
+    .genreSection {
+        padding: 2rem 0;
+    }
+    .genreImageWrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .genreName {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+    }
+     .genreSection {
+        /* margin: 7rem 0 0 0; */
+    }
+    .genreCarousel {
+        gap: 0.1rem;
+    }
+    .genreImageWrapper {
+        width: 150px;
+        height: 150px;
+    }
+}

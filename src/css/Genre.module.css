@@ -1,0 +1,95 @@
+.genreContainer {
+  width: 100%;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-left: 6px solid #e11d48;
+  padding-left: 10px;
+}
+
+.genreRow {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.genreRow::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.card {
+  width: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border: none;
+  flex: 0 0 auto;
+  background: #fff;
+  transition: all 0.01s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ef4444;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.cardBody {
+  padding: 15px;
+}
+
+.detailsBtn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.detailsBtn:hover {
+  background: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 200px;
+  }
+  .imageWrapper {
+    height: 260px;
+  }
+}

@@ -1,0 +1,182 @@
+/* Container */
+.videoCollectionContainer {
+  /* margin: 2rem 0; */
+  padding: 0 150px;
+}
+
+/* Title */
+.videoCollectionTitle {
+  font-size: 2rem;
+  color: rgb(23, 23, 209);
+  text-align: left;
+  /* margin-bottom: 30px; */
+  width: 100%;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.videoCollectionTitle::after {
+ content: '';
+  position: absolute;
+  bottom: 0;
+  left: 7%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+      background: linear-gradient(135deg, rgb(30, 30, 217), rgb(239, 19, 19));
+  border-radius: 2px;
+}
+
+/* Horizontal Scroll Row */
+.videoCollectionRow {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar (all browsers) */
+.videoCollectionRow::-webkit-scrollbar {
+  display: none;
+}
+.videoCollectionRow {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;      /* Firefox */
+}
+
+/* Card */
+.card {
+  min-width: 260px;
+  max-width: 280px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Poster */
+.poster {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Play Button */
+.playBtn {
+  width: 50px;
+  height: 50px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 140px;
+  right: 20px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.playBtn::before {
+  content: "";
+  border-left: 16px solid #fff;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  margin-left: 3px;
+}
+
+/* Iframe */
+.videoIframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  display: block;
+}
+
+/* Card Body */
+.cardBody {
+  padding: 12px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.thumb {
+  width: 50px;
+  height: 65px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.info h3 {
+  font-size: 14px;
+  margin: 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.stars {
+  font-size: 13px;
+  color: #f4c542;
+  margin: 4px 0;
+}
+
+/* Details */
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 8px;
+  color: #444;
+}
+
+.details div {
+  text-align: center;
+}
+
+.details span {
+  display: block;
+  font-weight: 600;
+  color: #000;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .videoCollectionContainer{
+      padding: 0 15px;
+
+  }
+  .card {
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .videoCollectionContainer{
+      padding: 0 15px;
+
+  }
+  .videoCollectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    min-width: 180px;
+  }
+}

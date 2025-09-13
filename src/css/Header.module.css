@@ -1,0 +1,437 @@
+/* Header.module.css */
+
+.headerContainer {
+    width: 100%;
+    /* height: calc(100vh - 80px); */
+    padding: 3rem 0 4rem;
+    background: linear-gradient(135deg, rgb(65, 65, 184), rgb(191, 59, 59));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.headerContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.titleContainer {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.titleContainer h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff8a00, #e52e71);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.titleContainer p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.desktopOnly {
+    display: block;
+}
+
+.mobileOnly {
+    display: none;
+}
+
+.carouselContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.carouselItem {
+    height: 550px;
+}
+
+.slideContainer {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+/* Desktop Version Styles */
+.desktopVersion {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.backdropContainer {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.backdropImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.backdropOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.movieInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+    z-index: 2;
+}
+
+.posterContainer {
+    flex: 0 0 300px;
+    height: 450px;
+    position: relative;
+    margin-right: 3rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.posterContainer:hover {
+    transform: scale(1.03);
+}
+
+.posterImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ratingBadge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffc107;
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    backdrop-filter: blur(5px);
+}
+
+.starIcon {
+    margin-right: 5px;
+    color: #ffc107;
+}
+
+.detailsContainer {
+    flex: 1;
+    color: white;
+    max-width: 600px;
+}
+
+.languageTag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.movieTitle {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(to right, #fff, #ccc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.movieOriginalTitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.movieMeta {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.metaIcon {
+    margin-right: 5px;
+    color: #e50914;
+}
+
+.movieOverview {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.primaryButton {
+    background: linear-gradient(to right, #e50914, #b00710);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+}
+
+.primaryButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+    background: linear-gradient(to right, #ff0a16, #d30812);
+}
+
+.buttonIcon {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Mobile Version Styles */
+.mobileVersion {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mobilePosterContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.mobilePosterImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.mobilePosterContainer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    z-index: 2;
+}
+
+.mobileRatingBadge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffc107;
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    z-index: 3;
+    backdrop-filter: blur(5px);
+}
+
+.mobileContent {
+    position: relative;
+    z-index: 3;
+    padding: 2rem;
+    text-align: center;
+}
+
+.mobileMovieTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.mobileViewButton {
+    background: linear-gradient(to right, #e50914, #b00710);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+}
+
+.mobileViewButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+    background: linear-gradient(to right, #ff0a16, #d30812);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .movieInfo {
+        padding: 0 3rem;
+    }
+    
+    .posterContainer {
+        flex: 0 0 280px;
+        height: 420px;
+        margin-right: 2rem;
+    }
+    
+    .movieTitle {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carouselItem {
+        height: 500px;
+    }
+    
+    .movieInfo {
+        padding: 0 2rem;
+    }
+    
+    .posterContainer {
+        flex: 0 0 250px;
+        height: 380px;
+    }
+    
+    .movieTitle {
+        font-size: 2rem;
+    }
+    
+    .movieOverview {
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        padding: 2rem 0 3rem;
+    }
+    
+    .titleContainer h2 {
+        font-size: 2rem;
+    }
+    
+    .desktopOnly {
+        display: none;
+    }
+    
+    .mobileOnly {
+        display: block;
+        font-size: 1rem;
+    }
+    
+    .carouselItem {
+        height: 500px;
+    }
+    
+    .desktopVersion {
+        display: none;
+    }
+    
+    .mobileVersion {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .titleContainer h2 {
+        font-size: 1.8rem;
+    }
+    
+    .carouselItem {
+        height: 450px;
+    }
+    
+    .mobileMovieTitle {
+        font-size: 1.5rem;
+    }
+    
+    .mobileViewButton {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
