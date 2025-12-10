@@ -65,13 +65,13 @@ const Footer = () => {
         {/* Bottom */}
         <div className={styles.footerBottom}>
           <div className={styles.footerBottomContent}>
-            <p>&copy; 2023 MovieDB. All rights reserved.</p>
-            <div className={styles.tmdbAttribution}>
+            <p>&copy; 2025 MovieDB. All rights reserved.</p>
+            {/* <div className={styles.tmdbAttribution}>
               <p>Powered by</p>
               <div className={styles.tmdbLogo}>
                 <span>TMDB API</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
