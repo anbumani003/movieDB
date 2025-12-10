@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Header from './Header'
 import Genre from './Genre'
-import PopularActor from './popularActor'
+import PopularActor from './PopularActor'
 import CardDesign from './CardDesign'
 import { getTopRatedMovies, getTvShow } from '../services/Api';
 import Footer from './Footer'
