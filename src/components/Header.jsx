@@ -29,7 +29,7 @@ console.log(id);
     return (
         <div className={Style.headerContainer}>
             <div className={Style.titleContainer}>
-                <h2>Now Playing in Theatres</h2>
+                <h2>Now Playing in Theatre</h2>
                 <p className={Style.desktopOnly}>Experience the magic of cinema with these currently streaming movies</p>
                 <p className={Style.mobileOnly}>Swipe to explore current movies</p>
             </div>
